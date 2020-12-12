@@ -4,6 +4,7 @@ import firebase from 'firebase/app';
 import { BrowserRouter as Router } from 'react-router-dom';
 import connection from '../helpers/data/connection';
 import MyNavbar from '../components/MyNavbar';
+import Routes from '../helpers/Routes';
 
 connection();
 
@@ -32,6 +33,7 @@ class App extends React.Component {
       <div>
         <Router>
           <MyNavbar user={user} />
+          <Routes />
         </Router>
       </div>
     );
