@@ -17,10 +17,9 @@ export default class Home extends React.Component {
 
   render() {
     const { leagues } = this.state;
-    const showLeagues = () => {
-      console.warn(leagues);
-      leagues.map((league) => <LeagueCard league={league} />);
-    };
+    const showLeagues = () => (
+      leagues.map((league) => <LeagueCard league={league} />)
+    );
     return (
       <div className='text-center'>
         <h1>Leagues</h1>

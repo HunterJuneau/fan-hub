@@ -16,7 +16,7 @@ export default class LeagueCard extends React.Component {
     const { league } = this.state;
     console.warn(league);
     return (
-    <Link to={`/leagues/${league.firebaseKey}`}>
+    <Link to={`/${league.firebaseKey}`}>
       <div className='card m-2'>
         <h2 className='card-title'>{league.name}</h2>
         <img className='card-img-bottom' src={league.logoImg} alt='logo' />
