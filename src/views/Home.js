@@ -1,5 +1,5 @@
 import React from 'react';
-import getPublicLeagues from '../helpers/data/leagueData';
+import { getPublicLeagues } from '../helpers/data/leagueData';
 import LeagueCard from '../components/Cards/LeagueCard';
 
 export default class Home extends React.Component {
@@ -17,13 +17,13 @@ export default class Home extends React.Component {
 
   render() {
     const { leagues } = this.state;
-    const showLeagues = () => (
-      leagues.map((league) => <LeagueCard league={league} />)
+    const renderLeagues = () => (
+      leagues.map((league) => <LeagueCard league={league} key={league.firebaseKey} />)
     );
     return (
       <div className='text-center'>
         <h1>Leagues</h1>
-        <div className='d-flex'>{showLeagues()}</div>
+        <div className='d-flex'>{renderLeagues()}</div>
       </div>
     );
   }
